@@ -1,0 +1,15 @@
+# Android
+*.iml
+.gradle/
+.idea/
+android/local.properties
+android/app/build/
+android/build/
+
+# Go
+desktop/android-webcam-desktop
+desktop/vendor/
+
+# OS
+.DS_Store
+Thumbs.db
