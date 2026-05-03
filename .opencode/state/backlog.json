@@ -1,0 +1,151 @@
+{
+  "last_sync": "2026-05-03T22:17:37Z",
+  "issues": [
+    {
+      "number": 11,
+      "priority": "low",
+      "title": "[Android + Desktop] Testes unitários e de integração",
+      "status": "open",
+      "depends_on": [],
+      "blocks": [],
+      "acceptance_summary": [
+        "Cobertura > 70% nos pacotes críticos",
+        "CI verde em cada PR antes do merge"
+      ],
+      "fetched_body": false
+    },
+    {
+      "number": 10,
+      "priority": "low",
+      "title": "[Android + Desktop] Descoberta automática na LAN via mDNS",
+      "status": "open",
+      "depends_on": [],
+      "blocks": [],
+      "acceptance_summary": [
+        "Usuário abre o app e vê o desktop disponível automaticamente, sem digitar IP",
+        "Funciona em redes IPv4 e IPv6"
+      ],
+      "fetched_body": false
+    },
+    {
+      "number": 9,
+      "priority": "low",
+      "title": "[Android] Persistir configurações com DataStore (Preferences)",
+      "status": "open",
+      "depends_on": [],
+      "blocks": [],
+      "acceptance_summary": [
+        "Configurações persistem após fechar e reabrir o app",
+        "Configurações padrão aplicadas em primeiro uso"
+      ],
+      "fetched_body": false
+    },
+    {
+      "number": 8,
+      "priority": "low",
+      "title": "[Android] Modo USB via UVC (Android 14+, latência < 30 ms)",
+      "status": "open",
+      "depends_on": [],
+      "blocks": [],
+      "acceptance_summary": [
+        "Telefone aparece como webcam USB no Windows/Linux/macOS sem instalar driver",
+        "Latência < 30 ms medida glass-to-glass",
+        "Funciona em dispositivos com Android 14+ que suportam UVC"
+      ],
+      "fetched_body": false
+    },
+    {
+      "number": 7,
+      "priority": "low",
+      "title": "[Desktop/Go] Sink para macOS (CoreMediaIO / OBS VirtualCam)",
+      "status": "open",
+      "depends_on": [],
+      "blocks": [],
+      "acceptance_summary": [
+        "Câmera virtual aparece no FaceTime, Zoom e Meet no macOS",
+        "Compatível com Apple Silicon (arm64) e Intel (amd64)"
+      ],
+      "fetched_body": false
+    },
+    {
+      "number": 6,
+      "priority": "low",
+      "title": "[Desktop/Go] Sink para Windows (DirectShow virtual camera)",
+      "status": "open",
+      "depends_on": [],
+      "blocks": [],
+      "acceptance_summary": [
+        "Câmera virtual aparece no Zoom, Meet e OBS no Windows",
+        "Sem instalação manual de drivers adicionais além do indicado na doc"
+      ],
+      "fetched_body": false
+    },
+    {
+      "number": 5,
+      "priority": "low",
+      "title": "[Desktop/Go] Implementar decodificação H.265 via GStreamer",
+      "status": "open",
+      "depends_on": [],
+      "blocks": [],
+      "acceptance_summary": [
+        "Vídeo aparecendo no /dev/video10 sem artefatos",
+        "Latência de decode < 20 ms com hardware acceleration"
+      ],
+      "fetched_body": false
+    },
+    {
+      "number": 4,
+      "priority": "low",
+      "title": "[Android] Emitir stats reais no statsFlow (FPS, bitrate, RTT)",
+      "status": "open",
+      "depends_on": [],
+      "blocks": [],
+      "acceptance_summary": [
+        "Stats atualizados em tempo real na StreamingScreen",
+        "RTT visível e condizente com o ping real da rede local"
+      ],
+      "fetched_body": false
+    },
+    {
+      "number": 3,
+      "priority": "low",
+      "title": "[Android] Implementar stop() e liberação de recursos",
+      "status": "open",
+      "depends_on": [],
+      "blocks": [],
+      "acceptance_summary": [
+        "Sem memory leaks (verificar com Android Profiler)",
+        "Ícone de câmera/microfone some da barra de status após parar o streaming",
+        "App retorna à tela inicial sem crash"
+      ],
+      "fetched_body": false
+    },
+    {
+      "number": 2,
+      "priority": "low",
+      "title": "[Android] Implementar sinalização WebRTC via TCP (SDP + ICE)",
+      "status": "open",
+      "depends_on": [],
+      "blocks": [],
+      "acceptance_summary": [
+        "Handshake WebRTC completo em < 2 s após abrir o app",
+        "Reconexão automática quando a conexão TCP cai"
+      ],
+      "fetched_body": false
+    },
+    {
+      "number": 1,
+      "priority": "low",
+      "title": "[Android] Implementar pipeline CameraX → MediaCodec H.265 → RTP",
+      "status": "open",
+      "depends_on": [],
+      "blocks": [],
+      "acceptance_summary": [
+        "Stream de vídeo H.265 chegando no desktop client",
+        "Latência glass-to-glass < 100 ms em Wi-Fi 5 GHz",
+        "Sem crashes ao iniciar/parar o streaming"
+      ],
+      "fetched_body": false
+    }
+  ]
+}
