@@ -89,6 +89,23 @@ fun SettingsScreen(
 
             HorizontalDivider()
 
+            // Desktop Host
+            Text("Desktop Host (IP)", style = MaterialTheme.typography.titleMedium)
+            OutlinedTextField(
+                value = settings.desktopHost,
+                onValueChange = { viewModel.setDesktopHost(it) },
+                label = { Text("Enter PC IP address") },
+                placeholder = { Text("e.g., 192.168.1.100") },
+                modifier = Modifier.fillMaxWidth(),
+                singleLine = true,
+                isError = settings.desktopHost.isNotEmpty() && !isValidIpAddress(settings.desktopHost),
+                supportingText = if (settings.desktopHost.isNotEmpty() && !isValidIpAddress(settings.desktopHost)) {
+                    { Text("Invalid IP address format") }
+                } else null
+            )
+
+            HorizontalDivider()
+
             // Transport
             Text("Transport", style = MaterialTheme.typography.titleMedium)
             listOf("WebRTC (auto, preferred)", "Raw RTP/UDP (LAN only)").forEach { t ->
@@ -102,4 +119,13 @@ fun SettingsScreen(
             }
         }
     }
+}
+
+/**
+ * Valida se é um IP válido (IPv4)
+ */
+private fun isValidIpAddress(ip: String): Boolean {
+    return ip.matches(
+        Regex("^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")
+    )
 }
