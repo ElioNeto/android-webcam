@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ElioNeto/teamcode/main/schemas/teamcode.json",
+  "default_agent": "build",
+  "command": {
+    "dev": {
+      "description": "Run the desktop app",
+      "template": "go run ./desktop"
+    },
+    "build": {
+      "description": "Build all components",
+      "template": "go build ./..."
+    },
+    "test": {
+      "description": "Run tests",
+      "template": "go test ./... -v"
+    }
+  },
+  "agent": {
+    "build": {
+      "description": "Default development agent"
+    }
+  },
+  "permission": {
+    "edit": "allow",
+    "bash": {
+      "go *": "allow",
+      "*": "ask"
+    }
+  }
+}
